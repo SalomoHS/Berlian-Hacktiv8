@@ -315,18 +315,18 @@ def build_pipeline(
 
 
 # Demo / Smoke test
-if __name__ == '__main__':
-    sample = pd.DataFrame({
-        'text': [
-            "GRATIS!!! Klik http://bit.ly/abc123 sekarang & menangkan Rp500.000!!!",
-            "Dear user, your account has been SELECTED!! Visit www.promo-win.com to claimmm your $1000 reward.",
-            "Hello, please find attached the invoice for Rp 2.500.000 as discussed.\n\nRegards.",
-            "Congratulationsss!!! You've wonnnn a brand new iPhone 😱🎉 – reply NOW!!!"
-        ]
-    })
+# if __name__ == '__main__':
+#     sample = pd.DataFrame({
+#         'text': [
+#             "GRATIS!!! Klik http://bit.ly/abc123 sekarang & menangkan Rp500.000!!!",
+#             "Dear user, your account has been SELECTED!! Visit www.promo-win.com to claimmm your $1000 reward.",
+#             "Hello, please find attached the invoice for Rp 2.500.000 as discussed.\n\nRegards.",
+#             "Congratulationsss!!! You've wonnnn a brand new iPhone 😱🎉 – reply NOW!!!"
+#         ]
+#     })
 
-    pipeline = build_pipeline(elongation_smart = False)
-    sample['clean_text'] = pipeline.fit_transform(sample['text'])
+#     pipeline = build_pipeline(elongation_smart = False)
+#     sample['clean_text'] = pipeline.fit_transform(sample['text'])
 
-    pd.set_option('display.max_colwidth', 80)
-    print(sample[['text', 'clean_text']].to_string(index=False))
+#     pd.set_option('display.max_colwidth', 80)
+#     print(sample[['text', 'clean_text']].to_string(index=False))
