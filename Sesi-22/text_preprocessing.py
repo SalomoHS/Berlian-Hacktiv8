@@ -270,7 +270,7 @@ class StopwordRemover(BaseEstimator, TransformerMixin):
 
 
 # Factory: build_pipeline()
-def build_pipeline(
+def preprocess_pipeline(
     elongation_max_repeat: int = 2,
     elongation_smart: bool = False,
     extra_stopwords: set = None
