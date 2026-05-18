@@ -254,8 +254,11 @@ class StopwordRemover(BaseEstimator, TransformerMixin):
     def __init__(self, extra_stopwords: set = None):
         self.extra_stopwords = extra_stopwords or set()
 
+    @property
+    def _sw(self):
+        return BASE_STOPWORDS | self.extra_stopwords
+
     def fit(self, X, y=None):
-        self._sw = BASE_STOPWORDS | self.extra_stopwords
         return self
 
     @log_transform
