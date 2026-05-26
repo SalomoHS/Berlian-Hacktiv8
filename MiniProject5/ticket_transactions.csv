@@ -1,0 +1,13 @@
+ticket_id,text,category
+TCK-1001,Saya lupa password email kantor dan tidak bisa login ke portal HR,password resets
+TCK-1002,Koneksi VPN selalu terputus saat mengakses server file dari pabrik Cikarang,VPN issues
+TCK-1003,Muncul error code 500 saat input data produksi suku cadang di sistem ERP,ERP errors
+TCK-1004,Mohon bantuan untuk penggantian scanner barcode yang rusak di area perakitan,hardware requests
+TCK-1005,Akun SAP saya terkunci setelah 3 kali salah memasukkan password,password resets
+TCK-1006,Aplikasi VPN tidak bisa dibuka setelah update Windows 11,VPN issues
+TCK-1007,Data inventory di ERP tidak sinkron dengan jumlah fisik di gudang sparepart,ERP errors
+TCK-1008,Request laptop baru untuk karyawan baru di departemen Quality Assurance,hardware requests
+TCK-1009,Minta tolong reset password untuk login ke PC di pos satpam,password resets
+TCK-1010,Tidak bisa konek VPN dari luar negeri saat dinas ke Jepang,VPN issues
+TCK-1011,Gagal melakukan posting jurnal keuangan di ERP muncul notifikasi access denied,ERP errors
+TCK-1012,Pengajuan monitor tambahan untuk tim desain engineering,hardware requests
