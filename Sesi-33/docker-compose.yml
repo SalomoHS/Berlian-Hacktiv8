@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - INDEX_NAME=${INDEX_NAME}
+      - MODEL_ENDPOINT=${MODEL_ENDPOINT}
+      - MODEL_API_KEY=${MODEL_API_KEY}
+      - MODEL_ID=${MODEL_ID}
+      - CLASSIFIER_ENDPOINT=${CLASSIFIER_ENDPOINT}
+      - CLASSIFIER_API_KEY=${CLASSIFIER_API_KEY}
+      - CLASSIFIER_MODEL_ID=${CLASSIFIER_MODEL_ID}
+    volumes:
+      - ./backend/.env:/app/.env
+    networks:
+      - chat-ai-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - chat-ai-network
+    depends_on:
+      - backend
+
+networks:
+  chat-ai-network:
+    driver: bridge

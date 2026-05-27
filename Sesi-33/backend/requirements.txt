@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+httpx
+python-dotenv
+pinecone
+google-generativeai
+langchain-openai
+langchain-core
+langchain-google-genai
+rank-bm25
+numpy
+pydantic
