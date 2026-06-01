@@ -1,0 +1,15 @@
+[project]
+name = "sesi-33"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=0.105.2",
+    "boto3>=1.43.18",
+    "dotenv>=0.9.9",
+    "google-generativeai>=0.8.6",
+    "openai>=2.38.0",
+    "pydantic>=2.13.4",
+    "youtube-transcript-api>=1.2.4",
+]
